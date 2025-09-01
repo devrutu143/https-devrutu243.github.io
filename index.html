@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- First Dashboard -->
+    <div class="dashboard" id="first-dashboard">
+        <div class="input-box">
+            <h2>Welcome?</h2>
+            <input type="text" id="name-input" placeholder="Enter your name">
+            <button id="next-btn" disabled>Next</button>
+            <p id="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- Second Dashboard -->
+    <div class="dashboard second-dashboard" id="second-dashboard">
+        <div class="greeting-container">
+            <h1 id="greeting-part1" class="typewriter"></h1>
+            <h1 id="greeting-part2" class="typewriter" style="display: none;"></h1>
+        </div>
+        <button id="click-next-btn" class="flicker">Click to next</button>
+    </div>
+
+    <!-- Third Dashboard -->
+    <div class="dashboard third-dashboard" id="third-dashboard">
+        <h1 id="third-greeting" class="typewriter"></h1>
+        <div class="option-container">
+            <button id="yes-btn" class="option-btn">Ha bolo?</button>
+            <button id="no-btn" class="option-btn">Nah</button>
+        </div>
+    </div>
+
+    <!-- Fourth Dashboard -->
+    <div class="dashboard fourth-dashboard" id="fourth-dashboard">
+        <h1 id="fourth-greeting" class="typewriter"></h1>
+        <button id="fourth-next-btn" class="flicker">Click for next</button>
+    </div>
+
+    <!-- Fifth Dashboard -->
+    <div class="dashboard fifth-dashboard" id="fifth-dashboard">
+        <h1 id="fifth-greeting" class="typewriter"></h1>
+        <div class="option-container">
+            <button id="gift-yes-btn" class="option-btn">Kya ha?</button>
+            <button id="gift-no-btn" class="option-btn">Nhi deknhi</button>
+        </div>
+    </div>
+
+    <!-- Sixth Dashboard -->
+    <div class="dashboard sixth-dashboard" id="sixth-dashboard">
+        <div class="gift-container">
+            <div id="gift-box1" class="gift-box"></div>
+            <div id="gift-box2" class="gift-box"></div>
+        </div>
+        <p id="choose-text">thik sa choose karna, madam ji</p>
+        <p id="result-text" style="display: none;"></p>
+    </div>
+
+    <!-- Seventh Dashboard -->
+    <div class="dashboard seventh-dashboard" id="seventh-dashboard">
+        <h1 id="seventh-greeting" class="typewriter"></h1>
+        <button id="seventh-next-btn" class="flicker">click for next</button>
+    </div>
+
+    <!-- Eighth Dashboard -->
+    <div class="dashboard eighth-dashboard" id="eighth-dashboard">
+        <h1 id="eighth-greeting" class="typewriter"></h1>
+        <div class="option-container">
+            <button id="date-yes-btn" class="option-btn">ha</button>
+            <button id="date-no-btn" class="option-btn">nah</button>
+        </div>
+    </div>
+
+    <!-- Ninth Dashboard -->
+    <div class="dashboard ninth-dashboard" id="ninth-dashboard">
+        <h1 id="ninth-greeting" class="typewriter"></h1>
+        <p id="end-text" class="pulse">End ....</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
