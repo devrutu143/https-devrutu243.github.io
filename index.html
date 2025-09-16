@@ -1,86 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romantic Website</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>The Fate by Rutu</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;700&display=swap');
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Merriweather', serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  header {
+    background: rgba(0,0,0,0.4);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    animation: fadeInDown 1s ease forwards;
+  }
+
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    color: #ffd700;
+    text-shadow: 0 0 8px #ffd700;
+  }
+
+  header p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #eee;
+    margin-top: 0.3rem;
+    font-style: italic;
+  }
+
+  main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 1.2rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px 15px 0 0;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  main p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-bottom: 1.3rem;
+    text-align: justify;
+    text-indent: 1.2em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpText 0.8s ease forwards;
+  }
+
+  main p:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  main p:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  main p:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  main p:nth-child(4) {
+    animation-delay: 1.2s;
+  }
+  main p:nth-child(5) {
+    animation-delay: 1.5s;
+  }
+  main p:nth-child(6) {
+    animation-delay: 1.8s;
+  }
+  main p:nth-child(7) {
+    animation-delay: 2.1s;
+  }
+  main p:nth-child(8) {
+    animation-delay: 2.4s;
+  }
+  main p:nth-child(9) {
+    animation-delay: 2.7s;
+  }
+  main p:nth-child(10) {
+    animation-delay: 3s;
+  }
+  main p:nth-child(11) {
+    animation-delay: 3.3s;
+  }
+  main p:nth-child(12) {
+    animation-delay: 3.6s;
+  }
+  main p:nth-child(13) {
+    animation-delay: 3.9s;
+  }
+  main p:nth-child(14) {
+    animation-delay: 4.2s;
+  }
+
+  /* Scrollbar for mobile */
+  main::-webkit-scrollbar {
+    width: 6px;
+  }
+  main::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  main::-webkit-scrollbar-thumb {
+    background: #ffd700;
+    border-radius: 3px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #ccc;
+    background: rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  /* Animations */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUpText {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive font size */
+  @media (max-width: 400px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+    main p {
+      font-size: 1rem;
+    }
+  }
+</style>
 </head>
 <body>
-    <!-- First Dashboard -->
-    <div class="dashboard" id="first-dashboard">
-        <div class="input-box">
-            <h2>Welcome?</h2>
-            <input type="text" id="name-input" placeholder="Enter your name">
-            <button id="next-btn" disabled>Next</button>
-            <p id="error-msg"></p>
-        </div>
-    </div>
 
-    <!-- Second Dashboard -->
-    <div class="dashboard second-dashboard" id="second-dashboard">
-        <div class="greeting-container">
-            <h1 id="greeting-part1" class="typewriter"></h1>
-            <h1 id="greeting-part2" class="typewriter" style="display: none;"></h1>
-        </div>
-        <button id="click-next-btn" class="flicker">Click to next</button>
-    </div>
+<header>
+  <h1>The Fate</h1>
+  <p>by Rutu</p>
+</header>
 
-    <!-- Third Dashboard -->
-    <div class="dashboard third-dashboard" id="third-dashboard">
-        <h1 id="third-greeting" class="typewriter"></h1>
-        <div class="option-container">
-            <button id="yes-btn" class="option-btn">Ha bolo?</button>
-            <button id="no-btn" class="option-btn">Nah</button>
-        </div>
-    </div>
+<main id="story">
+  <!-- Story paragraphs will be inserted here by JS -->
+</main>
 
-    <!-- Fourth Dashboard -->
-    <div class="dashboard fourth-dashboard" id="fourth-dashboard">
-        <h1 id="fourth-greeting" class="typewriter"></h1>
-        <button id="fourth-next-btn" class="flicker">Click for next</button>
-    </div>
+<footer>
+  &copy; 2024 Rutu - All rights reserved
+</footer>
 
-    <!-- Fifth Dashboard -->
-    <div class="dashboard fifth-dashboard" id="fifth-dashboard">
-        <h1 id="fifth-greeting" class="typewriter"></h1>
-        <div class="option-container">
-            <button id="gift-yes-btn" class="option-btn">Kya ha?</button>
-            <button id="gift-no-btn" class="option-btn">Nhi deknhi</button>
-        </div>
-    </div>
+<script>
+  const storyText = `This world may only be an illusion — an open-world game we call life. Yet we don’t even know what “real” truly feels like. Here, every reckless act risks suffering or even death. And even if we live carefully, time itself will take us away once we grow old.
 
-    <!-- Sixth Dashboard -->
-    <div class="dashboard sixth-dashboard" id="sixth-dashboard">
-        <div class="gift-container">
-            <div id="gift-box1" class="gift-box"></div>
-            <div id="gift-box2" class="gift-box"></div>
-        </div>
-        <p id="choose-text">thik sa choose karna, madam ji</p>
-        <p id="result-text" style="display: none;"></p>
-    </div>
+That means our fate has already been decided. No one can live beyond what fate allows. If that’s true, then this world is nothing more than a game, programmed from start to end. Every single living being is written, set into motion, and left to wander. That is why life feels like a game — a place where we explore, fight, learn, and struggle to survive.
 
-    <!-- Seventh Dashboard -->
-    <div class="dashboard seventh-dashboard" id="seventh-dashboard">
-        <h1 id="seventh-greeting" class="typewriter"></h1>
-        <button id="seventh-next-btn" class="flicker">click for next</button>
-    </div>
+But what lies beyond fate? Who is Fate? What do they want? We don’t know. We are nothing more than creations of this unseen power — a force invincible and far beyond our thoughts or imagination. So what can we do? All we can do is live within that will until death embraces us. Perhaps something exists after death — but if so, is that too under Fate’s control?
 
-    <!-- Eighth Dashboard -->
-    <div class="dashboard eighth-dashboard" id="eighth-dashboard">
-        <h1 id="eighth-greeting" class="typewriter"></h1>
-        <div class="option-container">
-            <button id="date-yes-btn" class="option-btn">ha</button>
-            <button id="date-no-btn" class="option-btn">nah</button>
-        </div>
-    </div>
+When everything seems lost, a strange thing happens: hope rises. In darkness, Fate sometimes feels like a hidden god — unseen, but leaving behind a fragile spark of light. Think about it: when we write with a pencil and make a mistake, we erase it. With a pen, we scratch it out.
 
-    <!-- Ninth Dashboard -->
-    <div class="dashboard ninth-dashboard" id="ninth-dashboard">
-        <h1 id="ninth-greeting" class="typewriter"></h1>
-        <p id="end-text" class="pulse">End ....</p>
-    </div>
+Now apply that to life. People die from disease, accident, suicide, murder — countless methods. But what if these aren’t random? What if Fate simply erases certain lives, correcting its own “programming mistakes”? Those deaths we see… might only be Fate editing its story.
 
-    <script src="script.js"></script>
+And there’s more. Time — the most powerful force in the universe — is not free. Time can bend, consume, and transform reality itself, but it is not cruel by choice. People say, “Time is cruel; it waits for no one.” That sentence misses the truth. Time is not cruel on its own — it was shaped by Fate to behave this way, to do its job.
+
+Whatever is written cannot truly be changed. Even gods may delay events, but they cannot stop Fate’s will. When the time for something arrives, it will happen.
+
+So we ask the old questions: Is this world a simulation? Are those around us NPCs? Are we players, controlled by someone else, our wills only illusions? Is everything we see an illusion and the truth hidden behind it?
+
+Honestly, we don’t know the true reality. But maybe that uncertainty is itself part of Fate’s design. If such thoughts appear in our minds, perhaps Fate has already decided those future moments to come. Everything — even the questions we ask — happens by the will of the all-mighty Fate.
+
+From my perspective, Fate is older and stronger than any god we worship. Fate is the first — primordial above existence and non-existence alike.`;
+
+  const storyContainer = document.getElementById('story');
+
+  // Split story into paragraphs by double newlines
+  const paragraphs = storyText.split(/\n\n+/);
+
+  paragraphs.forEach((para, i) => {
+    const p = document.createElement('p');
+    p.textContent = para.trim();
+    storyContainer.appendChild(p);
+  });
+</script>
+
 </body>
-  </html>
+</html>
